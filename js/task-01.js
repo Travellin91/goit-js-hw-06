@@ -17,4 +17,12 @@
 //Category: Technologies
 //Elements: 5
 
+const categoriesItems = document.querySelectorAll('#categories .item');
+
+console.log(`У списку ${categoriesItems.length} категорії.`);
+
+categoriesItems.forEach(category => {
+    console.log(`Категорія: ${category.querySelector('h2').textContent}\nКількість елементів: ${category.querySelectorAll('li').length}`);
+});
+
 
