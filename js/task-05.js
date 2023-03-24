@@ -12,4 +12,4 @@ function handleInputChange(event) {
   if (event.currentTarget.value.trim() === '') {
     textOutput.textContent = 'Anonymous';
   }
-};
+}
