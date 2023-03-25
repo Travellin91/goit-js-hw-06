@@ -20,11 +20,18 @@ const ingredients = [
 //Додасть елементу клас item.
 //Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 
-const ingredientsList = document.querySelector("#ingredients");
+const ingredientsList = document.querySelector('#ingredients');
 
-ingredients.forEach((ingredient) => {
-  const li = document.createElement("li");
-  li.textContent = ingredient;
-  li.classList.add("item");
-  ingredientsList.append(li);
+const items = ingredients.map(ingredient => {
+  const listItem = document.createElement('li');
+  listItem.classList.add('item');
+  listItem.textContent = ingredient;
+  
+  return listItem;
 });
+
+console.log(items);
+
+ingredientsList.append(...items);
+
+
